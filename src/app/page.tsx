@@ -18,14 +18,15 @@ export default function Home ()  {
           type:'Trend',
         }),
       });
-      if(res.ok) alert('Data Saved to MongoDB');
+      
+
     }catch(error){
       console.error('Error saving:',error);
     }
   };
-  useEffect(()=>{
-    addContent();
-  },[]);
+   //useEffect(()=>{
+   // addContent();
+ // },[]);
   useEffect(()=>{  
     if(titleRef.current){
       titleRef.current.animate(
