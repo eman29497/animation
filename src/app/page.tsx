@@ -143,15 +143,15 @@ export default function Home ()  {
       <div className="grid grid-cols-1 w-full px-4 mt-16 md:grid-cols-3 gap-6  max-w-6xl mx-auto">
 <div 
  ref={card1Ref}
-className="bg-white w-full max-w-3xl h-96 pl-0 pr-8 py-8  rounded-3xl border border-gray-200 shadow-md hover:shadow-xl flex flex-col transition-all duration-300 hover:-transalate-y-2">
-  <div className="h-40 w-40 bg-purple-50 rounded-2xl mb-6 ">
+className="bg-white w-full max-w-3xl h-96 items-start  p-8  rounded-3xl border border-gray-200 shadow-md hover:shadow-xl flex flex-col transition-all duration-500 hover:-transalate-y-2">
+  <div className="h-40 w-40 bg-purple-50 rounded-2xl mb-6 flex items-center justify-center ">
     <img
     src='/image1.svg'
     className="max-h-full w-auto object contain"
     />
   </div>
   <h3 className="text-2xl font-bold mb-4">Latest Trends</h3>
-  <p className="text-gray-500 text-center text-sm">
+  <p className="text-gray-500 text-left text-sm">
     Explore the newest UI design movements in the industry
 </p>
 </div>
