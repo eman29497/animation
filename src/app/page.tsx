@@ -143,7 +143,7 @@ export default function Home ()  {
       <div className="grid grid-cols-1 w-full px-4 mt-16 md:grid-cols-3 gap-6  max-w-6xl mx-auto">
 <div 
  ref={card1Ref}
-className="bg-white w-full max-w-3xl h-96 p-8 rounded-3xl border border-gray-200 shadow-md hover:shadow-xl flex flex-col transition-all duration-300 hover:-transalate-y-2">
+className="bg-white w-full max-w-3xl h-96 pl-0 pr-8 py-8  rounded-3xl border border-gray-200 shadow-md hover:shadow-xl flex flex-col transition-all duration-300 hover:-transalate-y-2">
   <div className="h-40 w-40 bg-purple-50 rounded-2xl mb-6 ">
     <img
     src='/image1.svg'
