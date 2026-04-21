@@ -7,8 +7,8 @@ export default function Home ()  {
   const card1Ref = useRef<HTMLDivElement>(null);
   const card2Ref = useRef<HTMLDivElement>(null);
   const card3Ref = useRef<HTMLDivElement>(null);
-   const addContent = async ()=>{
-    try{
+   const addContent = async () => {
+     try{
       const res = await fetch ('/api/content',{
         method:'POST',
         headers:{'Content-Type' : 'application/json'},
@@ -18,8 +18,6 @@ export default function Home ()  {
           type:'Trend',
         }),
       });
-      
-
     }catch(error){
       console.error('Error saving:',error);
     }
@@ -40,6 +38,7 @@ export default function Home ()  {
         }
       );
     }
+  
     if(imageRef.current){
       imageRef.current.animate(
         [
@@ -105,8 +104,11 @@ export default function Home ()  {
         );
       }
     }
- 
   },[]);
+
+
+
+
   return (
     <div className="flex flex-col min-h-screen bg-white items-center pt-20 px-4">
       <h1
@@ -179,14 +181,10 @@ Discover a world of unique vector art and 2D characters designed to give your pr
 Bring your static designs to life with smooth, high-quality transitions and interactive motion effects
 </p>
 </div>
-
       </div>
       </div>
-
-
-    
-
-
-
   );
 }
+
+
+

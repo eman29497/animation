@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useRef } from 'react';
-import { useSelector, UseSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { RootState } from '../redux/store';
 const TrendPage = () => {
   const {trend} = useSelector((state:RootState)=>state.content);
@@ -12,9 +12,9 @@ const TrendPage = () => {
   useEffect(() => {
     const options = { duration: 800, easing: 'ease-out', fill: 'forwards' as FillMode };
     if (headerRef.current) headerRef.current.animate([{ opacity: 0, transform: 'translateY(-20px)' }, { opacity: 1, transform: 'translateY(0)' }], options);
-    if (mainCardRef.current) mainCardRef.current.animate([{ opacity: 0, scale: 0.95 }, { opacity: 1, scale: 1 }], { ...options, delay: 200 });
-    if (card2Ref.current) card2Ref.current.animate([{ opacity: 0, x: 20 }, { opacity: 1, x: 0 }], { ...options, delay: 400 });
-    if (card3Ref.current) card3Ref.current.animate([{ opacity: 0, x: 20 }, { opacity: 1, x: 0 }], { ...options, delay: 600 });
+    if (mainCardRef.current) mainCardRef.current.animate([{ opacity: 0, scale: 0.8 }, { opacity: 1, scale: 1 }], { ...options, delay: 600 });
+    if (card2Ref.current) card2Ref.current.animate([{ opacity: 0, x: 20 }, { opacity: 1, x: 0 }], { ...options, delay: 1000 });
+    if (card3Ref.current) card3Ref.current.animate([{ opacity: 0, x: 20 }, { opacity: 1, x: 0 }], { ...options, delay: 1200 });
   }, []);
   return (
     <div className="min-h-screen bg-white p-6 md:p-12">
