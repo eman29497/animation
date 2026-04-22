@@ -22,9 +22,11 @@ export default function Home ()  {
       console.error('Error saving:',error);
     }
   };
-   //useEffect(()=>{
-   // addContent();
- // },[]);
+  // useEffect(()=>{
+   
+    //  })
+    //})
+  
   useEffect(()=>{  
     if(titleRef.current){
       titleRef.current.animate(
@@ -68,12 +70,13 @@ export default function Home ()  {
       card1Ref.current.animate(
       [
         {opacity:0,transform:'translateY(40px)'},
-        {opacity:1,transform:'translateY(0)'}
+        {opacity:1,transform:'translateY(0px)'}
       ],
       {
         duration:1000,
         easing:'ease-out',
         fill:'forwards',
+        iterations:Infinity,
         delay:500
       }
       );
@@ -81,28 +84,30 @@ export default function Home ()  {
         card2Ref.current.animate(
           [
             {opacity:0,transform:'translateY(40px)'},
-            {opacity:1,transform:'translateT(0)'}
+            {opacity:1,transform:'translateY(0px)'}
           ],
           {duration:2000,
             easing:'ease-out',
             fill:'forwards',
-            delay:700
+            iterations:Infinity,
+            delay:600
           }
         );
       }
-      if(card3Ref.current){
-        card3Ref.current.animate(
-          [
-            {opacity:0,transform:'translateY(40px)'},
-            {opacity:1,transform:'translateY(0)'}
-          ],
-          {duration:3000,
-            easing:'ease-out',
-            fill:'forwards',
-            delay:900
-          }
-        );
-      }
+ if(card3Ref.current){
+  card3Ref.current.animate(
+    [
+      {opacity:0,transform:'translateY(40px)'},
+      {opacity:1,transform:'translateY(0px)'}
+    ],
+    {duration:3000,
+      easing:'ease-out',
+      fill:'forwards',
+      iterations:Infinity,
+      delay:700
+    }
+  )
+ }
     }
   },[]);
 
@@ -143,15 +148,17 @@ export default function Home ()  {
       <div className="grid grid-cols-1 w-full px-4 mt-16 md:grid-cols-3 gap-6  max-w-6xl mx-auto">
 <div 
  ref={card1Ref}
-className="bg-white w-full max-w-3xl h-96 items-start  p-8  rounded-3xl border border-gray-200 shadow-md hover:shadow-xl flex flex-col transition-all duration-500 hover:-transalate-y-2">
-  <div className="h-40 w-40 bg-purple-50 rounded-2xl mb-6 flex items-center justify-center ">
+className="bg-white group relative z-10 w-full max-w-3xl h-96 items-start  p-8  rounded-3xl
+ border border-gray-200 shadow-md  flex flex-col transform transition-all duration-500 
+ ease-in-out hover:-translate-y-4 cursor-pointer hover:shadow-2xl hover:border-purple-400">
+  <div className="h-40 w-40 bg-purple-50 rounded-2xl mb-6  flex items-center justify-center">
     <img
     src='/image1.svg'
     className="max-h-full w-auto object contain"
     />
   </div>
-  <h3 className="text-2xl font-bold mb-4">Latest Trends</h3>
-  <p className="text-gray-500 text-left text-sm">
+  <h3 className="text-2xl font-bold mb-4">Latest Trend</h3>    
+  <p className="text-gray-500 text-left text-sm">                                                          
     Explore the newest UI design movements in the industry
 </p>
 </div>
